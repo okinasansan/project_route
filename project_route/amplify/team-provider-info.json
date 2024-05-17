@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-projectroute-dev-e37bd-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-dev-e37bd-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-dev-e37bd-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-projectroute-dev-e37bd-deployment",
+      "UnauthRoleName": "amplify-projectroute-dev-e37bd-unauthRole",
+      "StackName": "amplify-projectroute-dev-e37bd",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:637423166744:stack/amplify-projectroute-dev-e37bd/5fe6bde0-143e-11ef-b1f6-0a4a7a255a9b",
+      "AmplifyAppId": "d19c0i800bwid0"
+    },
+    "categories": {
+      "api": {
+        "projectroute": {}
+      }
+    }
+  }
+}
