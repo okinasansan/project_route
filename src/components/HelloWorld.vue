@@ -1,7 +1,7 @@
 <template>
   <v-text-field
     outlined
-    label="検索"
+    label="聖地を検索！"
     append-inner-icon="mdi-magnify"
   ></v-text-field>
   <v-card
