@@ -8,8 +8,8 @@
 
       <v-app-bar-title>聖地巡礼ルートガイド</v-app-bar-title>
 
-      <RouterLink to="/"><v-btn variant="text">トップ</v-btn></RouterLink>
-      <RouterLink to="/about"><v-btn variant="text">このサイトについて</v-btn></RouterLink>
+      <v-btn variant="text" @click="$router.push('/')">トップ</v-btn>
+      <v-btn variant="text" @click="$router.push('/about')">このサイトについて</v-btn>
     </v-app-bar>
     <v-main>
       <router-view />
@@ -36,7 +36,7 @@
           class="primary lighten-2 py-4 text-center white--text"
           cols="12"
         >
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          {{ new Date().getFullYear() }} — <strong>情報通信プロジェクト (アプリを極める) C班</strong>
         </v-col>
       </v-row>
   </v-footer>
@@ -52,12 +52,8 @@ export default {
 
   data: () => ({
       links: [
-        'Home',
-        'About Us',
-        'Team',
-        'Services',
-        'Blog',
-        'Contact Us',
+        'トップ',
+        'このサイトについて',
       ],
     }),
 }

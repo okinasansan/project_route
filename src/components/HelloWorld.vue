@@ -1,9 +1,17 @@
 <template>
-  <v-text-field
-    outlined
-    label="聖地を検索！"
-    append-inner-icon="mdi-magnify"
-  ></v-text-field>
+  <v-form @submit.prevent="submit">
+    <v-text-field
+      outlined
+      label="聖地を検索！"
+      v-model="text"
+      append-inner-icon="mdi-magnify"
+    ></v-text-field>
+  </v-form>
+
+  <div> text: {{ finish_text }} </div>
+
+
+
   <v-card
     :loading="loading"
     class="mx-auto my-12"
@@ -90,6 +98,8 @@ export default {
   data: () => ({
       loading: false,
       selection: 1,
+      text: '',
+      finish_text: '',
     }),
   
   methods: {
@@ -97,6 +107,10 @@ export default {
       this.loading = true
       setTimeout(() => (this.loading = false), 2000)
     },
+
+    submit(){
+      this.finish_text = this.text;
+    }
   },
 }
 </script>
