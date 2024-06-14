@@ -1,0 +1,14 @@
+{
+  "resourceName": "r60607dynamoa9d37596",
+  "tableName": "dynamoa9b37596",
+  "partitionKey": {
+    "fieldName": "your_name",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "steins_gate",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
