@@ -9,9 +9,10 @@ type title @model {
 
   # 作品名
   name: String!
-  
+
   # 説明
   description: String
+
 }
 
 # 観光地
@@ -34,10 +35,10 @@ type address @model {
 
   # 観光地名
   name: String!
-  
+
   # 住所
   address: String!
-
+  
   # 説明
   description: String
 
