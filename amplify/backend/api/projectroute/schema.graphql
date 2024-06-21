@@ -2,8 +2,43 @@
 # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
-type Todo @model {
+# 作品名
+type title @model {
+  # 識別ID
   id: ID!
+
+  # 作品名
   name: String!
+  
+  # 説明
   description: String
+}
+
+# 観光地
+type tourist_spot @model {
+  # 識別ID
+  id: ID!
+
+  # 観光地名
+  name: String!
+
+  # 説明
+  description: String
+
+}
+
+# 住所
+type address @model {
+  # 識別ID
+  id: ID!
+
+  # 観光地名
+  name: String!
+  
+  # 住所
+  address: String!
+
+  # 説明
+  description: String
+
 }
