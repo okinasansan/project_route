@@ -5,6 +5,7 @@
       label="聖地を検索！"
       v-model="text"
       append-inner-icon="mdi-magnify"
+      @click:append-inner="submit"
     ></v-text-field>
   </v-form>
 
@@ -15,7 +16,7 @@
   <v-card
     :loading="loading"
     class="mx-auto my-12"
-    max-width="374"
+    max-width="800"
   >
     <template slot="progress">
       <v-progress-linear
@@ -37,18 +38,6 @@
         align="center"
         class="mx-0"
       >
-        <v-rating
-          :value="4.5"
-          color="amber"
-          dense
-          half-increments
-          readonly
-          size="14"
-        ></v-rating>
-
-        <div class="grey--text ms-4">
-          4.5 (413)
-        </div>
       </v-row>
 
       <div class="my-4 text-subtitle-1">
@@ -62,28 +51,9 @@
 
     <v-card-title>Tonight's availability</v-card-title>
 
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
-      >
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
-    </v-card-text>
 
     <v-card-actions>
-      <v-btn
-        color="deep-purple lighten-2"
-        text
-        @click="reserve"
-      >
+      <v-btn>
         Reserve
       </v-btn>
     </v-card-actions>
