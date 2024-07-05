@@ -22,9 +22,9 @@
         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
         ></v-img>
 
-        <v-card-title>{{ item.spot }}</v-card-title>
+        <v-card-title>{{ item.spot }} ／ {{ item.title }}</v-card-title>
 
-        <v-checkbox v-model="selected" value="1" label="Hoge1">
+        <v-checkbox v-model="selected" :value="item.id" label="ここへ行く">
         </v-checkbox>
 
         <v-card-text>
@@ -33,24 +33,24 @@
             class="mx-0"
           >
           </v-row>
-
-          <div class="my-4 text-subtitle-1">
-            {{ item.title }}
-          </div>
+          {{ item.address }}
 
         </v-card-text>
 
         <v-divider class="mx-4"></v-divider>
-
-        <v-card-title>{{ item.address }}</v-card-title>
       </v-card-item>
       
     </v-card>
+
+    <div>{{ selected }}へ{{ selected.length }}</div><v-btn>
+      巡礼開始！
+    </v-btn>
   </v-container>
   
 </template>
 
 <script>
+import items from '../assets/data.json'
 
 export default {
   name: 'HelloWorld',
@@ -62,26 +62,7 @@ export default {
         text: '',
         finish_text: '',
         selected:[],
-        items:[
-          {
-            id: 1,
-            spot: "東京電機大学",
-            title: "でんだい",
-            address: "足立区",
-          },
-          {
-            id: 2,
-            spot: "ラジ館",
-            title: "シュタゲ",
-            address: "アキバ",
-          },
-          {
-            id: 3,
-            spot: "神社",
-            title: "シュタゲ",
-            address: "神田",
-          }
-        ]
+        items: items
       }
     },
   
