@@ -6,27 +6,19 @@ export type AmplifyDependentResourcesAttributes = {
       "GraphQLAPIKeyOutput": "string"
     }
   },
-  "auth": {
-    "projectroutedfab864e": {
-      "AppClientID": "string",
-      "AppClientIDWeb": "string",
-      "IdentityPoolId": "string",
-      "IdentityPoolName": "string",
-      "UserPoolArn": "string",
-      "UserPoolId": "string",
-      "UserPoolName": "string"
+  "function": {
+    "S3Trigger54a74105": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
     }
   },
   "storage": {
-    "r60607dynamoa9d37596": {
-      "Arn": "string",
-      "Name": "string",
-      "PartitionKeyName": "string",
-      "PartitionKeyType": "string",
-      "Region": "string",
-      "SortKeyName": "string",
-      "SortKeyType": "string",
-      "StreamArn": "string"
+    "TestStorage0712": {
+      "BucketName": "string",
+      "Region": "string"
     }
   }
 }

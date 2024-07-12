@@ -1,0 +1,14 @@
+{
+  "resourceName": "TestStorage0712",
+  "policyUUID": "36e14230",
+  "bucketName": "pprojectrouteda6b81ebc8404fbca1a5f92b1e2fe8f2",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Trigger54a74105",
+  "groupAccess": {}
+}
