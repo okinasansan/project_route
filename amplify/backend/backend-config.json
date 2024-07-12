@@ -17,38 +17,29 @@
       "service": "AppSync"
     }
   },
-  "auth": {
-    "projectroutedfab864e": {
-      "customAuth": false,
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
+  "auth": {},
+  "function": {
+    "S3Trigger54a74105": {
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Cognito"
+      "service": "Lambda"
     }
   },
   "storage": {
-    "r60607dynamoa9d37596": {
+    "TestStorage0712": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger54a74105"
+        }
+      ],
       "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
+      "service": "S3"
     }
   }
 }

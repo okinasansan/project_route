@@ -14,12 +14,24 @@
     "categories": {
       "api": {
         "projectroute": {}
-      },
+      }
+    }
+  },
+  "devvvvvv": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-projectroute-devvvvvv-0abde-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-devvvvvv-0abde-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-devvvvvv-0abde-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-projectroute-devvvvvv-0abde-deployment",
+      "UnauthRoleName": "amplify-projectroute-devvvvvv-0abde-unauthRole",
+      "StackName": "amplify-projectroute-devvvvvv-0abde",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:637423166744:stack/amplify-projectroute-devvvvvv-0abde/7d3a1e20-353e-11ef-8401-06d40bdb5af9",
+      "AmplifyAppId": "d19c0i800bwid0"
+    },
+    "categories": {
       "auth": {
         "projectroutedfab864e": {}
-      },
-      "storage": {
-        "r60607dynamoa9d37596": {}
       }
     }
   }
