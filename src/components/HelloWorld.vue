@@ -2,8 +2,8 @@
   <v-form @submit.prevent="submit">
     <v-text-field
       outlined
-      label="聖地を検索！"
-      v-model="text"
+      label="作品名で検索！"
+      v-model="searchKeyword"
       append-inner-icon="mdi-magnify"
       @click:append-inner="submit"
     ></v-text-field>
@@ -16,7 +16,7 @@
     class="mx-auto my-12"
     max-width="800"
     >
-      <v-card-item v-for="item in items" v-bind:key="item.id">
+      <v-card-item v-for="item in filteredItems" v-bind:key="item.id">
         <v-img
         height="250"
         src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
@@ -42,7 +42,7 @@
       
     </v-card>
 
-    <div>{{ selected }}へ{{ selected.length }}</div><v-btn>
+    <div>{{ selected }}へ{{ selected.length }}</div><v-btn @click="goToNextPage">
       巡礼開始！
     </v-btn>
   </v-container>
@@ -59,22 +59,35 @@ export default {
       //selection: 1,      
 
       return {
-        text: '',
+        searchKeyword: '',
         finish_text: '',
         selected:[],
-        items: items
+        items: items,
       }
     },
   
   methods: {
-    reserve () {
-      this.loading = true
-      setTimeout(() => (this.loading = false), 2000)
-    },
 
     submit(){
-      this.finish_text = this.text;
+      this.finish_text = this.searchKeyword;
+    },
+
+    goToNextPage(){
+      this.$router.push('/Results')
     }
   },
+
+  computed: {
+    filteredItems() {
+      return this.items.filter(item => {
+        // 検索クエリが空の場合、全ての項目を表示する
+        if (this.searchKeyword.trim() === '') {
+          return true;
+        }
+        // 名前に検索クエリが含まれている場合にtrueを返す
+        return item.title.toLowerCase().includes(this.searchKeyword.toLowerCase());
+      });
+    }
+  }
 }
 </script>
