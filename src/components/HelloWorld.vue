@@ -24,7 +24,7 @@
 
         <v-card-title>{{ item.spot }} ／ {{ item.title }}</v-card-title>
 
-        <v-checkbox v-model="selected" :value="item.id" label="ここへ行く">
+        <v-checkbox v-model="selected" :value="item.spot" label="ここへ行く">
         </v-checkbox>
 
         <v-card-text>
