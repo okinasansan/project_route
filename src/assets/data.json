@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "spot": "東京電機大学",
+      "title": "でんだい",
+      "address": "東京都足立区千住旭町５",
+      "googlemap": "none"
+    },
+    {
+      "id": 2,
+      "spot": "ラジ館",
+      "title": "シュタゲ",
+      "address": "東京都千代田区外神田１丁目１５−１６",
+      "googlemap": "none"
+    },
+    {
+      "id": 3,
+      "spot": "神社",
+      "title": "シュタゲ",
+      "address": "東京都千代田区神田須田町２丁目２５−１",
+      "googlemap": "none"
+    },
+    {
+        "id": 4,
+        "spot": "ラボ",
+        "title": "シュタゲ",
+        "address": "東京都千代田区外神田３丁目６－１１",
+        "googlemap": "none"
+    },
+    {
+        "id": 5,
+        "spot": "UDX",
+        "title": "シュタゲ",
+        "address": "東京都千代田区外神田４丁目１４−１",
+        "googlemap": "none"
+    }
+]

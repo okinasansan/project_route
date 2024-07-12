@@ -11,66 +11,60 @@
 
   <div> text: {{ finish_text }} </div>
 
-
-
-  <v-card
-    :loading="loading"
+  <v-container>
+    <v-card
     class="mx-auto my-12"
     max-width="800"
-  >
-    <template slot="progress">
-      <v-progress-linear
-        color="deep-purple"
-        height="10"
-        indeterminate
-      ></v-progress-linear>
-    </template>
+    >
+      <v-card-item v-for="item in items" v-bind:key="item.id">
+        <v-img
+        height="250"
+        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        ></v-img>
 
-    <v-img
-      height="250"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
+        <v-card-title>{{ item.spot }} ／ {{ item.title }}</v-card-title>
 
-    <v-card-title>Cafe Badilico</v-card-title>
+        <v-checkbox v-model="selected" :value="item.id" label="ここへ行く">
+        </v-checkbox>
 
-    <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
+        <v-card-text>
+          <v-row
+            align="center"
+            class="mx-0"
+          >
+          </v-row>
+          {{ item.address }}
 
-      <div class="my-4 text-subtitle-1">
-        $ • Italian, Cafe
-      </div>
+        </v-card-text>
 
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
-    </v-card-text>
+        <v-divider class="mx-4"></v-divider>
+      </v-card-item>
+      
+    </v-card>
 
-    <v-divider class="mx-4"></v-divider>
-
-    <v-card-title>Tonight's availability</v-card-title>
-
-
-    <v-card-actions>
-      <v-btn>
-        Reserve
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+    <div>{{ selected }}へ{{ selected.length }}</div><v-btn>
+      巡礼開始！
+    </v-btn>
+  </v-container>
+  
 </template>
 
 <script>
+import items from '../assets/data.json'
 
 export default {
   name: 'HelloWorld',
 
-  data: () => ({
-      loading: false,
-      selection: 1,
-      text: '',
-      finish_text: '',
-    }),
+  data (){
+      //selection: 1,      
+
+      return {
+        text: '',
+        finish_text: '',
+        selected:[],
+        items: items
+      }
+    },
   
   methods: {
     reserve () {
