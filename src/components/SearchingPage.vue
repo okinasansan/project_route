@@ -24,7 +24,7 @@
 
         <v-card-title>{{ item.spot }} ／ {{ item.title }}</v-card-title>
 
-        <v-checkbox v-model="selected" :value="item.spot" label="ここへ行く">
+        <v-checkbox v-model="selected" :value="item.address" label="ここへ行く">
         </v-checkbox>
 
         <v-card-text>
@@ -53,7 +53,7 @@
 import items from '../assets/data.json'
 
 export default {
-  name: 'HelloWorld',
+  name: 'SearchingPage',
 
   data (){
       //selection: 1,      
@@ -73,7 +73,10 @@ export default {
     },
 
     goToNextPage(){
-      this.$router.push('/Results')
+      const selectSpot = this.selected;
+      const SelectedSpot = JSON.stringify(selectSpot);
+      console.log('gotonextpage')
+      this.$router.push({ name: 'Results', query: { data: SelectedSpot } })
     }
   },
 
