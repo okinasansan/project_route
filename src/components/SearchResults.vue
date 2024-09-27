@@ -1,14 +1,44 @@
 <template>
-    result
+  <div v-for="(value, index) in deserializedValues" :key="index">
+      <p>{{ value }}</p>
+  </div>
+
+  <GoogleMap api-key=key
+    :center="{ lat: 35.6762, lng: 139.6503 }"
+    :zoom="12"
+    style="width: 100%; height: 500px"
+  >   
+  </GoogleMap>
 </template>
 
 <script>
-export default {
+
+import { defineComponent } from 'vue';
+import { GoogleMap } from 'vue3-google-map';
+
+export default defineComponent({
   name: 'SearchResults',
 
-  data: () => ({
-      
-    }),
+  props: {
+    searchResults: {
+      type: Array,
+      required: true,
+    },
+  },
+
+  components: {
+    GoogleMap,
+  },
+
+  data (){
+      return {
+        apikey: import.meta.env.VITE_APP_GOOGLEMAP_API
+      }
+  },
+
+  mounted() {
+    console.log(import.meta.env.VITE_APP_GOOGLEMAP_API);  // コンソールでも確認
+  },
   
   methods: {
     reserve () {
@@ -18,16 +48,6 @@ export default {
     submit(){
       
     },
-
-  /*computed: {
-    deserializedValues() {
-      return JSON.parse(this.$route.query.data || '[]');
-    }
   },
-
-  created() {
-    console.log('受け取った配列:', this.deserializedValues);
-  }*/
-  },
-}
+});
 </script>
