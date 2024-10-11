@@ -1,37 +1,39 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-projectroute-dev-e37bd-authRole",
-      "UnauthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-dev-e37bd-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-dev-e37bd-authRole",
+      "AuthRoleName": "amplify-projectrouteback-dev-bd957-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectrouteback-dev-bd957-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectrouteback-dev-bd957-authRole",
       "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-projectroute-dev-e37bd-deployment",
-      "UnauthRoleName": "amplify-projectroute-dev-e37bd-unauthRole",
-      "StackName": "amplify-projectroute-dev-e37bd",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:637423166744:stack/amplify-projectroute-dev-e37bd/5fe6bde0-143e-11ef-b1f6-0a4a7a255a9b",
-      "AmplifyAppId": "d19c0i800bwid0"
-    },
-    "categories": {
-      "api": {
-        "projectroute": {}
-      }
-    }
-  },
-  "devvvvvv": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-projectroute-devvvvvv-0abde-authRole",
-      "UnauthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-devvvvvv-0abde-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::637423166744:role/amplify-projectroute-devvvvvv-0abde-authRole",
-      "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-projectroute-devvvvvv-0abde-deployment",
-      "UnauthRoleName": "amplify-projectroute-devvvvvv-0abde-unauthRole",
-      "StackName": "amplify-projectroute-devvvvvv-0abde",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:637423166744:stack/amplify-projectroute-devvvvvv-0abde/7d3a1e20-353e-11ef-8401-06d40bdb5af9",
-      "AmplifyAppId": "d19c0i800bwid0"
+      "DeploymentBucketName": "amplify-projectrouteback-dev-bd957-deployment",
+      "UnauthRoleName": "amplify-projectrouteback-dev-bd957-unauthRole",
+      "StackName": "amplify-projectrouteback-dev-bd957",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:637423166744:stack/amplify-projectrouteback-dev-bd957/869a4960-8244-11ef-b896-0ec7d7c20b97",
+      "AmplifyAppId": "dp3jqfpfzp6l3",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-projectrouteback-dev-bd957-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
-        "projectroutedfab864e": {}
+        "projectrouteback765f176c": {}
+      },
+      "function": {
+        "projectrouteback765f176cCustomMessage": {
+          "REDIRECTURL": "https://main.d7zp0626iy3od.amplifyapp.com/",
+          "EMAILSUBJECT": "【聖地巡礼ルートガイド】アカウント作成確認メール",
+          "EMAILMESSAGE": "この度はご登録いただきありがとうございます。聖地巡礼ルートガイドのアカウントを有効にするために、次",
+          "deploymentBucketName": "amplify-projectrouteback-dev-bd957-deployment",
+          "s3Key": "amplify-builds/projectrouteback765f176cCustomMessage-6175452b536168764556-build.zip"
+        },
+        "S3Triggerdbe78b56": {
+          "deploymentBucketName": "amplify-projectrouteback-dev-bd957-deployment",
+          "s3Key": "amplify-builds/S3Triggerdbe78b56-5578487361654d436274-build.zip"
+        }
+      },
+      "api": {
+        "projectrouteback": {}
+      },
+      "storage": {
+        "s3Images": {}
       }
     }
   }
