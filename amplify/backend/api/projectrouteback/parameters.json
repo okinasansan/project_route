@@ -1,5 +1,5 @@
 {
-  "AppSyncApiName": "projectroute",
+  "AppSyncApiName": "projectrouteback",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false
 }

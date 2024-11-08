@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-components": "^1.9.40",
     "@mdi/font": "^5.9.55",
     "dotenv": "^16.4.5",
+    "aws-amplify": "^6.6.4",
     "google-maps-api-loader": "^1.1.1",
     "roboto-fontface": "*",
     "vue": "^3.4.21",
