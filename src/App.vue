@@ -26,11 +26,12 @@
           v-for="link in links"
           :key="link"
           color="primary lighten-1"
+          :to="link.page"
           text
           rounded
           class="my-2"
-       >
-         {{ link }}
+        >
+         {{ link.name }}
         </v-btn>
         <v-col
           class="primary lighten-2 py-4 text-center white--text"
@@ -50,8 +51,14 @@ export default {
 
   data: () => ({
       links: [
-        'トップ',
-        'このサイトについて',
+        {
+          name: 'トップ',
+          page: '/'
+        },
+        {
+          name: 'このサイトについて',
+          page: '/about'
+        }
       ],
     }),
 }

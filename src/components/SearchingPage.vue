@@ -9,8 +9,6 @@
     ></v-text-field>
   </v-form>
 
-  <div> text: {{ finish_text }} </div>
-
   <v-container>
     <v-card
     class="mx-auto my-12"
@@ -18,8 +16,10 @@
     >
       <v-card-item v-for="item in filteredItems" v-bind:key="item.id">
         <v-img
-        height="250"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          height="250"
+          :src="item.image"
+          lazy-src="/no_image_yoko.jpg"
+          :alt="item.spot"
         ></v-img>
 
         <v-card-title>{{ item.spot }} ／ {{ item.title }}</v-card-title>
@@ -42,7 +42,7 @@
       
     </v-card>
 
-    <div>{{ selected }}へ{{ selected.length }}</div><v-btn @click="goToNextPage">
+    <div>{{ selected }}へ</div><v-btn @click="goToNextPage">
       巡礼開始！
     </v-btn>
   </v-container>
@@ -77,7 +77,7 @@ export default {
       const SelectedSpot = JSON.stringify(selectSpot);
       console.log('gotonextpage')
       this.$router.push({ name: 'Results', query: { data: SelectedSpot } })
-    }
+    },
   },
 
   computed: {

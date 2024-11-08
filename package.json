@@ -11,19 +11,20 @@
   },
   "dependencies": {
     "@mdi/font": "^5.9.55",
+    "dotenv": "^16.4.5",
     "google-maps-api-loader": "^1.1.1",
     "roboto-fontface": "*",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2",
     "vue3-google-map": "^0.21.0",
-    "vuetify": "^3.6.8",
+    "vuetify": "^3.7.3",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
-    "axios": "^1.7.2",
+    "axios": "^1.7.7",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
     "prettier": "^3.2.5",
