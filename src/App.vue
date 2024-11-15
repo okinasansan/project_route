@@ -64,8 +64,3 @@ export default {
 }
 </script>
 
-//uokawa add サインアウトボタンの表示
-<template>
-  <amplify-greetings></amplify-greetings>
-  <router-view/>
-</template>
