@@ -30,7 +30,7 @@
           text
           rounded
           class="my-2"
-        >
+       >
          {{ link.name }}
         </v-btn>
         <v-col
@@ -63,3 +63,9 @@ export default {
     }),
 }
 </script>
+
+//uokawa add サインアウトボタンの表示
+<template>
+  <amplify-greetings></amplify-greetings>
+  <router-view/>
+</template>
