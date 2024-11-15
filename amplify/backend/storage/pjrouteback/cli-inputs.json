@@ -1,0 +1,14 @@
+{
+  "resourceName": "pjrouteback",
+  "policyUUID": "7bd67374",
+  "bucketName": "pj-route-back",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
