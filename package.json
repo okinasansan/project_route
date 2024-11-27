@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@aws-amplify/ui-components": "^1.9.40",
+    "@aws-sdk/client-dynamodb": "^3.696.0",
+    "@aws-sdk/lib-dynamodb": "^3.698.0",
     "@mdi/font": "^5.9.55",
     "aws-amplify": "^4.3.0",
+    "aws-sdk": "^2.1692.0",
     "dotenv": "^16.4.5",
     "google-maps-api-loader": "^1.1.1",
     "roboto-fontface": "*",

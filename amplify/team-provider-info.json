@@ -19,12 +19,19 @@
       "function": {
         "dynamo33353c02": {},
         "prbackdynamo67a2c2cb": {}
-        },
+      },
       "api": {
         "pjroutebackApi": {}
       },
       "storage": {
         "pjrouteback": {}
+      }
+    }
+  },
+  "dev": {
+    "categories": {
+      "auth": {
+        "projectrouteback94fa7bf4": {}
       }
     }
   }
