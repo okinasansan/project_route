@@ -121,6 +121,7 @@ export default {
   },
 
   computed: {
+    /*
     filteredItems() {
       return this.items.filter(item => {
         // 検索クエリが空の場合、全ての項目を表示する
@@ -131,6 +132,7 @@ export default {
         return item.title.toLowerCase().includes(this.searchKeyword.toLowerCase());
       });
     },
+    */
 
     filteredItems2() {
       return this.holyplaces.filter(holyplace => {
