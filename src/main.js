@@ -22,7 +22,7 @@ applyPolyfills().then(() => {
 
 loadFonts()
 
-console.log('Google Maps API Key:', import.meta.env.VITE_APP_GOOGLEMAP_API);
+//console.log('Google Maps API Key:', import.meta.env.VITE_APP_GOOGLEMAP_API);
 
 createApp(App)
   .use(router)
